@@ -12,7 +12,7 @@ submit.addEventListener('click', async (e) => {
   selectCity(city);
   weatherData = await getWeatherData();
   makeWeatherSheet(weatherData);
-  console.log(weatherData);
+  input.value = '';
 });
 
 function makeWeatherSheet(data) {
@@ -20,6 +20,7 @@ function makeWeatherSheet(data) {
     content.removeChild(content.firstElementChild);
   }
   const div = document.createElement('div');
+  div.classList.add('card');
   div.innerHTML = `
     <h1 class="cityName">${city}</h1>
     <p class="info temp">temprature : ${data.temp}</p>
@@ -28,5 +29,4 @@ function makeWeatherSheet(data) {
     <p class="info sunset">sunset :${data.sunset}</p>
     <p class="info windspeed">windspeed :${data.windspeed}</p>`;
   content.appendChild(div);
-  document.querySelector('.cityName').value;
 }
