@@ -1,0 +1,50 @@
+:root {
+  /* Primary Colors */
+  --sky-blue: #87ceeb;
+  --clean-white: #ffffff;
+  --charcoal: #2c3e50;
+
+  /* Weather Condition Colors */
+  --sunny: #ffb347;
+  --cloudy: #bdc3c7;
+  --rainy: #6c7a89;
+  --clear-night: #2c3e50;
+
+  /* UI Elements */
+  --search-bg: #f8f9fa;
+  --button-blue: #3498db;
+  --button-hover: #2980b9;
+  --border-light: #e9ecef;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 200px;
+  color: black;
+}
+
+form {
+  margin-top: 100px;
+  width: 50vw;
+}
+button {
+  background-color: var(--search-bg);
+  color: black;
+}
+form input {
+  width: 80%;
+}
+.card {
+  background-color: skyblue;
+  padding: 20px;
+  border-radius: 10px;
+}
