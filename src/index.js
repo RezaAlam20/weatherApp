@@ -1,4 +1,5 @@
 import './dom.js';
+import './style.css';
 
 const api_key = 'APW8UZG2P23V9HBML6PTFQAJG';
 let city;
