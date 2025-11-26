@@ -8,7 +8,7 @@ let weatherData;
 let city;
 submit.addEventListener('click', async (e) => {
   e.preventDefault();
-  city = input.value;
+  city = input.value.toUpperCase();
   selectCity(city);
   weatherData = await getWeatherData();
   makeWeatherSheet(weatherData);
@@ -23,10 +23,10 @@ function makeWeatherSheet(data) {
   div.classList.add('card');
   div.innerHTML = `
     <h1 class="cityName">${city}</h1>
-    <p class="info temp">temprature : ${data.temp}</p>
-    <p class="info description">description : ${data.description}</p>
-    <p class="info sunrise">sunrise : ${data.sunrise}</p>
-    <p class="info sunset">sunset :${data.sunset}</p>
-    <p class="info windspeed">windspeed :${data.windspeed}</p>`;
+    <p class="info temp">TEMPRATURE : ${data.temp}</p>
+    <p class="info description">DESCRIPTION : ${data.description}</p>
+    <p class="info sunrise">SUNRISE : ${data.sunrise}</p>
+    <p class="info sunset">SUNSET :${data.sunset}</p>
+    <p class="info windspeed">WINDSPEED :${data.windspeed}</p>`;
   content.appendChild(div);
 }
